@@ -1,0 +1,98 @@
+{% extends 'api_app/base.html' %}
+
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+<input type="submit" value="Submit">
+</form>
+
+<!-- <section class='weather-section group'>
+
+    <div class="col span-1-of-3 weather-part">
+        <h1>Cold</h1>
+        <div class="weather-box">
+            <p>{{ context.city }}</p>
+            <p>{{ context.temp }}</p>
+            <p>{{ context.humidity }}</p>
+            <p>{{ context.description }}</p>
+            <p><img src="{{ context.icon }}" alt=""></p>
+        </div>
+    </div>
+
+
+    <div class="col span-1-of-3 weather-part">
+        <h1>Warm</h1>
+        <div class="weather-box">
+            <h2>London</h2>
+            <div class="group">
+                <div class="col span-1-of-2 temp-icon">
+                    <p><img src="{{ context.icon }}" alt=""></p>
+                    <p>{{ context.temp }}</p>
+                </div>
+                <div class="col span-1-of-2 weather-info">
+                    <p>{{ context.city }}</p>
+                    <p>{{ context.humidity }}</p>
+                    <p>{{ context.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col span-1-of-3 weather-part">
+        <h1>Hot</h1>
+        <div class="weather-box">
+            <p>{{ context.city }}</p>
+            <p>{{ context.temp }}</p>
+            <p>{{ context.humidity }}</p>
+            <p>{{ context.description }}</p>
+            <p><img src="{{ context.icon }}" alt=""></p>
+        </div>
+    </div>
+</section> -->
+
+
+<section class='weather-section-2 group'>
+    <div class="col span-1-of-3 weather-part-2">
+        <h1>Hot</h1>
+        {% for city in cold_city %}
+        <div class="weather-box-2">
+            <h2>{{ city.city_name }}</h2>
+            <p>{{ city.temp }}</p>
+            <p>{{ city.humidity }}</p>
+            <p>{{ city.description }}</p>
+            <p><img src="{{ city.icon }}" alt=""></p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="col span-1-of-3 weather-part">
+        <h1>Warm</h1>
+        {% for city in warm_city %}
+        <div class="weather-box-2">
+            <h2>{{ city.city_name }}</h2>
+            <p>{{ city.temp }}</p>
+            <p>{{ city.humidity }}</p>
+            <p>{{ city.description }}</p>
+            <p><img src="{{ city.icon }}" alt=""></p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="col span-1-of-3 weather-part-2">
+        <h1>Hot</h1>
+        {% for city in hot_city %}
+        <div class="weather-box-2">
+            <h2>{{ city.city_name }}</h2>
+            <p>{{ city.temp }}</p>
+            <p>{{ city.humidity }}</p>
+            <p>{{ city.description }}</p>
+            <p><img src="{{ city.icon }}" alt=""></p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

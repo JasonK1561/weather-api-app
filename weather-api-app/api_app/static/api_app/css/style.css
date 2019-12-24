@@ -1,0 +1,56 @@
+/*
+h1{
+    text-align: center;
+}
+.weather-box{
+    border: 3px solid #ed8240;
+    //overflow: hidden;
+    height: 200px;
+    width:400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.temp-icon{
+    color:red;
+    text-align:center;
+}
+
+.weather-info{
+    text-align:left;
+}
+*/
+/* -------- BASIC SETUP ---------*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clear-fix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html{
+  color: black;
+  font-family: 'Lato', 'Arial', 'sans-serif';
+  font-weight: 300;
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  background-color: #ffffff;
+}
+
+/* -------- Weather Section --------*/
+.weather-section-2{
+    text-align: center;
+}
+
+.weather-box-2{
+    border: 3px solid #ed8240;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
